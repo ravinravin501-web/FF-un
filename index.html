@@ -4,11 +4,12 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
-<title>Free Fire ID Unban Request</title>
+<title>FF ID UNBAN</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
 <style>
+
 *{
 margin:0;
 padding:0;
@@ -17,36 +18,77 @@ font-family:'Poppins',sans-serif;
 }
 
 body{
+overflow:hidden;
+background:black;
+color:white;
+}
+
+/* VIDEO BG */
+
+.bg{
+position:fixed;
+width:100%;
+height:100%;
 background:url('https://wallpaperaccess.com/full/3311247.jpg');
 background-size:cover;
 background-position:center;
-min-height:100vh;
+filter:brightness(0.4);
+z-index:-1;
+animation:zoom 10s infinite alternate;
+}
+
+@keyframes zoom{
+from{
+transform:scale(1);
+}
+to{
+transform:scale(1.1);
+}
+}
+
+/* PAGES */
+
+.page{
+position:absolute;
+width:100%;
+height:100vh;
 display:flex;
 justify-content:center;
 align-items:center;
 padding:20px;
+transition:1s;
 }
 
-.container{
+.hidden{
+transform:translateX(100%);
+opacity:0;
+pointer-events:none;
+}
+
+/* CARD */
+
+.card{
 width:100%;
 max-width:420px;
 background:rgba(0,0,0,0.75);
-backdrop-filter:blur(8px);
-border-radius:20px;
+border:2px solid orange;
+backdrop-filter:blur(10px);
+border-radius:25px;
 padding:25px;
-color:white;
-box-shadow:0 0 20px rgba(255,140,0,0.6);
+box-shadow:0 0 25px orange;
 animation:glow 2s infinite alternate;
 }
 
 @keyframes glow{
 from{
-box-shadow:0 0 10px orange;
+box-shadow:0 0 15px orange;
 }
 to{
-box-shadow:0 0 25px red;
+box-shadow:0 0 30px red;
 }
 }
+
+/* LOGO */
 
 .logo{
 text-align:center;
@@ -54,53 +96,47 @@ margin-bottom:20px;
 }
 
 .logo img{
-width:120px;
+width:140px;
+animation:float 2s infinite alternate;
 }
 
-h2{
+@keyframes float{
+from{
+transform:translateY(0);
+}
+to{
+transform:translateY(-8px);
+}
+}
+
+h1{
 text-align:center;
 margin-bottom:20px;
 color:#ff9800;
+font-size:28px;
 }
 
-label{
-display:block;
-margin-top:15px;
-margin-bottom:6px;
-font-size:14px;
+p{
+text-align:center;
+color:#ddd;
+margin-bottom:20px;
 }
 
 input,select{
 width:100%;
-padding:12px;
+padding:14px;
+margin-top:14px;
 border:none;
-border-radius:10px;
-outline:none;
-background:#1e1e1e;
+border-radius:12px;
+background:#1a1a1a;
 color:white;
-}
-
-.qr-box{
-margin-top:20px;
-text-align:center;
-}
-
-.qr-box img{
-width:220px;
-border-radius:15px;
-border:3px solid orange;
-}
-
-.note{
-font-size:13px;
-margin-top:10px;
-color:#ffcc80;
+font-size:15px;
 }
 
 button{
 width:100%;
-padding:14px;
-margin-top:25px;
+padding:15px;
+margin-top:20px;
 border:none;
 border-radius:12px;
 background:linear-gradient(45deg,#ff6a00,#ff0000);
@@ -115,96 +151,175 @@ button:hover{
 transform:scale(1.03);
 }
 
-.success{
-display:none;
+/* QR */
+
+.qr{
+width:250px;
+display:block;
+margin:auto;
+border-radius:20px;
+border:3px solid orange;
 margin-top:20px;
-text-align:center;
-background:#0f3;
-padding:12px;
-border-radius:10px;
-color:black;
-font-weight:bold;
+animation:pulse 1.5s infinite;
 }
 
-.footer{
-margin-top:20px;
+@keyframes pulse{
+0%{
+transform:scale(1);
+}
+50%{
+transform:scale(1.05);
+}
+100%{
+transform:scale(1);
+}
+}
+
+.note{
+margin-top:15px;
+font-size:14px;
+color:#ffcc80;
+}
+
+/* SUCCESS */
+
+.success-icon{
+font-size:90px;
 text-align:center;
-font-size:12px;
+color:#00ff66;
+animation:pop 1s infinite alternate;
+}
+
+@keyframes pop{
+from{
+transform:scale(1);
+}
+to{
+transform:scale(1.1);
+}
+}
+
+.success-text{
+text-align:center;
+font-size:28px;
+margin-top:20px;
+font-weight:bold;
+color:#00ff66;
+}
+
+.small{
+margin-top:10px;
+font-size:14px;
 color:#ccc;
 }
+
 </style>
 </head>
 
 <body>
 
-<div class="container">
+<div class="bg"></div>
+
+<!-- PAGE 1 -->
+
+<div class="page" id="page1">
+
+<div class="card">
 
 <div class="logo">
 <img src="https://upload.wikimedia.org/wikipedia/en/0/09/Garena_Free_Fire_logo.png">
 </div>
 
-<h2>FREE FIRE ID UNBAN</h2>
+<h1>FREE FIRE UNBAN</h1>
 
-<form id="unbanForm">
+<p>Recover your banned Free Fire account instantly.</p>
 
-<label>Free Fire UID</label>
-<input type="number" placeholder="Enter UID" required>
+<input type="number" placeholder="Enter UID">
 
-<label>Select Region</label>
-<select required>
-<option value="">Choose Region</option>
+<input type="text" placeholder="Enter Player Name">
+
+<select>
+<option>Select Region</option>
 <option>India</option>
 <option>Bangladesh</option>
-<option>Singapore</option>
 <option>Brazil</option>
 <option>Indonesia</option>
+<option>Singapore</option>
 </select>
 
-<label>Player Name</label>
-<input type="text" placeholder="Enter nickname" required>
+<button onclick="nextPage()">CONTINUE</button>
 
-<div class="qr-box">
-<h3>Pay via GPay</h3>
+</div>
 
-<!-- Replace with your QR image -->
-<img src="YOUR_QR_IMAGE_LINK_HERE">
+</div>
+
+<!-- PAGE 2 -->
+
+<div class="page hidden" id="page2">
+
+<div class="card">
+
+<h1>PAYMENT</h1>
+
+<p>Scan QR & Complete Payment</p>
+
+<img src="gpay.png" class="qr">
 
 <p class="note">
 After payment upload screenshot below.
 </p>
+
+<input type="file">
+
+<button onclick="successPage()">VERIFY PAYMENT</button>
+
 </div>
 
-<label>Upload Payment Screenshot</label>
-<input type="file" required>
-
-<button type="submit">SUBMIT REQUEST</button>
-
-<div class="success" id="successMsg">
-Payment Verified ✔<br>
-Your Unban Request Submitted Successfully
 </div>
 
-</form>
+<!-- PAGE 3 -->
 
-<div class="footer">
-Powered By TSK Gaming
+<div class="page hidden" id="page3">
+
+<div class="card">
+
+<div class="success-icon">✔</div>
+
+<div class="success-text">
+REQUEST SUBMITTED
+</div>
+
+<p class="small">
+Your Free Fire Unban request is under verification.
+</p>
+
+<button onclick="location.reload()">
+BACK TO HOME
+</button>
+
 </div>
 
 </div>
 
 <script>
-document.getElementById("unbanForm").addEventListener("submit",function(e){
 
-e.preventDefault();
+function nextPage(){
 
-document.getElementById("successMsg").style.display="block";
+document.getElementById("page1").classList.add("hidden");
 
-setTimeout(()=>{
-alert("Request Submitted Successfully!");
-},500);
+document.getElementById("page2").classList.remove("hidden");
 
-});
+}
+
+function successPage(){
+
+document.getElementById("page2").classList.add("hidden");
+
+document.getElementById("page3").classList.remove("hidden");
+
+}
+
 </script>
 
 </body>
-</html>
+  </html>
