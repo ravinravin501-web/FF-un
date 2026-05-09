@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+<title>Free Fire ID Unban Request</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+body{
+background:url('https://wallpaperaccess.com/full/3311247.jpg');
+background-size:cover;
+background-position:center;
+min-height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+padding:20px;
+}
+
+.container{
+width:100%;
+max-width:420px;
+background:rgba(0,0,0,0.75);
+backdrop-filter:blur(8px);
+border-radius:20px;
+padding:25px;
+color:white;
+box-shadow:0 0 20px rgba(255,140,0,0.6);
+animation:glow 2s infinite alternate;
+}
+
+@keyframes glow{
+from{
+box-shadow:0 0 10px orange;
+}
+to{
+box-shadow:0 0 25px red;
+}
+}
+
+.logo{
+text-align:center;
+margin-bottom:20px;
+}
+
+.logo img{
+width:120px;
+}
+
+h2{
+text-align:center;
+margin-bottom:20px;
+color:#ff9800;
+}
+
+label{
+display:block;
+margin-top:15px;
+margin-bottom:6px;
+font-size:14px;
+}
+
+input,select{
+width:100%;
+padding:12px;
+border:none;
+border-radius:10px;
+outline:none;
+background:#1e1e1e;
+color:white;
+}
+
+.qr-box{
+margin-top:20px;
+text-align:center;
+}
+
+.qr-box img{
+width:220px;
+border-radius:15px;
+border:3px solid orange;
+}
+
+.note{
+font-size:13px;
+margin-top:10px;
+color:#ffcc80;
+}
+
+button{
+width:100%;
+padding:14px;
+margin-top:25px;
+border:none;
+border-radius:12px;
+background:linear-gradient(45deg,#ff6a00,#ff0000);
+color:white;
+font-size:16px;
+font-weight:bold;
+cursor:pointer;
+transition:0.3s;
+}
+
+button:hover{
+transform:scale(1.03);
+}
+
+.success{
+display:none;
+margin-top:20px;
+text-align:center;
+background:#0f3;
+padding:12px;
+border-radius:10px;
+color:black;
+font-weight:bold;
+}
+
+.footer{
+margin-top:20px;
+text-align:center;
+font-size:12px;
+color:#ccc;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<div class="logo">
+<img src="https://upload.wikimedia.org/wikipedia/en/0/09/Garena_Free_Fire_logo.png">
+</div>
+
+<h2>FREE FIRE ID UNBAN</h2>
+
+<form id="unbanForm">
+
+<label>Free Fire UID</label>
+<input type="number" placeholder="Enter UID" required>
+
+<label>Select Region</label>
+<select required>
+<option value="">Choose Region</option>
+<option>India</option>
+<option>Bangladesh</option>
+<option>Singapore</option>
+<option>Brazil</option>
+<option>Indonesia</option>
+</select>
+
+<label>Player Name</label>
+<input type="text" placeholder="Enter nickname" required>
+
+<div class="qr-box">
+<h3>Pay via GPay</h3>
+
+<!-- Replace with your QR image -->
+<img src="YOUR_QR_IMAGE_LINK_HERE">
+
+<p class="note">
+After payment upload screenshot below.
+</p>
+</div>
+
+<label>Upload Payment Screenshot</label>
+<input type="file" required>
+
+<button type="submit">SUBMIT REQUEST</button>
+
+<div class="success" id="successMsg">
+Payment Verified ✔<br>
+Your Unban Request Submitted Successfully
+</div>
+
+</form>
+
+<div class="footer">
+Powered By TSK Gaming
+</div>
+
+</div>
+
+<script>
+document.getElementById("unbanForm").addEventListener("submit",function(e){
+
+e.preventDefault();
+
+document.getElementById("successMsg").style.display="block";
+
+setTimeout(()=>{
+alert("Request Submitted Successfully!");
+},500);
+
+});
+</script>
+
+</body>
+</html>
