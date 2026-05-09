@@ -1,151 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
-<title>FF ID UNBAN</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+<title>FF ID UNBAN REQUEST</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
 <style>
-  /* MOBILE WEBSITE FIX */
-
-html,body{
-width:100%;
-height:100%;
-overflow-x:hidden;
-}
-
-/* MOBILE CONTAINER */
-
-.card{
-width:100%;
-max-width:380px;
-padding:20px;
-border-radius:20px;
-}
-
-/* MOBILE TEXT */
-
-h1{
-font-size:24px;
-}
-
-p{
-font-size:14px;
-line-height:1.5;
-}
-
-/* INPUTS */
-
-input,select{
-padding:13px;
-font-size:14px;
-}
-
-/* BUTTON */
-
-button{
-padding:14px;
-font-size:15px;
-}
-
-/* QR IMAGE */
-
-.qr{
-width:220px;
-max-width:100%;
-}
-
-/* COPYRIGHT */
-
-.copyright{
-font-size:11px;
-padding-bottom:5px;
-}
-
-/* DIALOG */
-
-.bottom-dialog{
-font-size:11px;
-bottom:40px;
-padding:8px;
-width:92%;
-}
-
-/* MOBILE RESPONSIVE */
-
-@media screen and (max-width:480px){
-
-.page{
-padding:12px;
-}
-
-.logo img{
-width:110px;
-}
-
-.card{
-max-width:100%;
-padding:18px;
-}
-
-.qr{
-width:200px;
-}
-
-h1{
-font-size:22px;
-}
-
-button{
-font-size:14px;
-}
-
-}
-  /* BOTTOM DIALOG */
-
-.bottom-dialog{
-position:fixed;
-bottom:45px;
-left:50%;
-transform:translateX(-50%);
-width:90%;
-max-width:500px;
-background:rgba(0,0,0,0.8);
-border:1px solid orange;
-padding:10px;
-border-radius:12px;
-font-size:12px;
-text-align:center;
-color:#ffcc80;
-backdrop-filter:blur(5px);
-animation:fadeGlow 2s infinite alternate;
-z-index:999;
-}
-
-@keyframes fadeGlow{
-from{
-box-shadow:0 0 10px orange;
-}
-to{
-box-shadow:0 0 20px red;
-}
-}
-
-/* COPYRIGHT */
-
-.copyright{
-position:fixed;
-bottom:10px;
-width:100%;
-text-align:center;
-font-size:12px;
-color:#aaa;
-letter-spacing:1px;
-z-index:999;
-}
 
 *{
 margin:0;
@@ -154,13 +18,14 @@ box-sizing:border-box;
 font-family:'Poppins',sans-serif;
 }
 
-body{
+html,body{
+width:100%;
+height:100%;
 overflow:hidden;
 background:black;
-color:white;
 }
 
-/* VIDEO BG */
+/* BACKGROUND */
 
 .bg{
 position:fixed;
@@ -169,9 +34,9 @@ height:100%;
 background:url('https://wallpaperaccess.com/full/3311247.jpg');
 background-size:cover;
 background-position:center;
-filter:brightness(0.4);
-z-index:-1;
+filter:brightness(0.35);
 animation:zoom 10s infinite alternate;
+z-index:-1;
 }
 
 @keyframes zoom{
@@ -179,11 +44,11 @@ from{
 transform:scale(1);
 }
 to{
-transform:scale(1.1);
+transform:scale(1.08);
 }
 }
 
-/* PAGES */
+/* PAGE */
 
 .page{
 position:absolute;
@@ -192,7 +57,7 @@ height:100vh;
 display:flex;
 justify-content:center;
 align-items:center;
-padding:20px;
+padding:15px;
 transition:1s;
 }
 
@@ -206,13 +71,13 @@ pointer-events:none;
 
 .card{
 width:100%;
-max-width:420px;
+max-width:380px;
 background:rgba(0,0,0,0.75);
+backdrop-filter:blur(8px);
 border:2px solid orange;
-backdrop-filter:blur(10px);
 border-radius:25px;
-padding:25px;
-box-shadow:0 0 25px orange;
+padding:22px;
+box-shadow:0 0 20px orange;
 animation:glow 2s infinite alternate;
 }
 
@@ -221,7 +86,7 @@ from{
 box-shadow:0 0 15px orange;
 }
 to{
-box-shadow:0 0 30px red;
+box-shadow:0 0 28px red;
 }
 }
 
@@ -229,11 +94,11 @@ box-shadow:0 0 30px red;
 
 .logo{
 text-align:center;
-margin-bottom:20px;
+margin-bottom:18px;
 }
 
 .logo img{
-width:140px;
+width:120px;
 animation:float 2s infinite alternate;
 }
 
@@ -242,43 +107,52 @@ from{
 transform:translateY(0);
 }
 to{
-transform:translateY(-8px);
+transform:translateY(-7px);
 }
 }
 
+/* TEXT */
+
 h1{
 text-align:center;
-margin-bottom:20px;
 color:#ff9800;
-font-size:28px;
+font-size:25px;
+margin-bottom:10px;
 }
 
 p{
 text-align:center;
 color:#ddd;
-margin-bottom:20px;
+font-size:14px;
+line-height:1.5;
+margin-bottom:18px;
 }
+
+/* INPUT */
 
 input,select{
 width:100%;
-padding:14px;
-margin-top:14px;
+padding:13px;
+margin-top:12px;
 border:none;
+outline:none;
 border-radius:12px;
-background:#1a1a1a;
+background:#161616;
 color:white;
-font-size:15px;
+font-size:14px;
 }
+
+/* BUTTON */
 
 button{
 width:100%;
-padding:15px;
-margin-top:20px;
+padding:14px;
+margin-top:18px;
 border:none;
 border-radius:12px;
 background:linear-gradient(45deg,#ff6a00,#ff0000);
 color:white;
-font-size:16px;
+font-size:15px;
 font-weight:bold;
 cursor:pointer;
 transition:0.3s;
@@ -291,12 +165,13 @@ transform:scale(1.03);
 /* QR */
 
 .qr{
-width:250px;
+width:220px;
+max-width:100%;
 display:block;
 margin:auto;
+margin-top:10px;
 border-radius:20px;
 border:3px solid orange;
-margin-top:20px;
 animation:pulse 1.5s infinite;
 }
 
@@ -305,7 +180,7 @@ animation:pulse 1.5s infinite;
 transform:scale(1);
 }
 50%{
-transform:scale(1.05);
+transform:scale(1.04);
 }
 100%{
 transform:scale(1);
@@ -313,15 +188,15 @@ transform:scale(1);
 }
 
 .note{
-margin-top:15px;
-font-size:14px;
+font-size:12px;
 color:#ffcc80;
+margin-top:12px;
 }
 
 /* SUCCESS */
 
 .success-icon{
-font-size:90px;
+font-size:80px;
 text-align:center;
 color:#00ff66;
 animation:pop 1s infinite alternate;
@@ -338,19 +213,90 @@ transform:scale(1.1);
 
 .success-text{
 text-align:center;
-font-size:28px;
-margin-top:20px;
+font-size:24px;
+margin-top:15px;
 font-weight:bold;
 color:#00ff66;
 }
 
 .small{
 margin-top:10px;
-font-size:14px;
+font-size:13px;
 color:#ccc;
+text-align:center;
+}
+
+/* DIALOG */
+
+.bottom-dialog{
+position:fixed;
+bottom:42px;
+left:50%;
+transform:translateX(-50%);
+width:92%;
+max-width:420px;
+background:rgba(0,0,0,0.85);
+border:1px solid orange;
+padding:8px;
+border-radius:12px;
+font-size:11px;
+text-align:center;
+color:#ffcc80;
+backdrop-filter:blur(5px);
+animation:dialogGlow 2s infinite alternate;
+z-index:999;
+}
+
+@keyframes dialogGlow{
+from{
+box-shadow:0 0 10px orange;
+}
+to{
+box-shadow:0 0 18px red;
+}
+}
+
+/* COPYRIGHT */
+
+.copyright{
+position:fixed;
+bottom:10px;
+width:100%;
+text-align:center;
+font-size:11px;
+color:#aaa;
+letter-spacing:1px;
+z-index:999;
+}
+
+/* MOBILE */
+
+@media screen and (max-width:480px){
+
+.card{
+padding:18px;
+}
+
+.logo img{
+width:105px;
+}
+
+h1{
+font-size:22px;
+}
+
+button{
+font-size:14px;
+}
+
+.qr{
+width:200px;
+}
+
 }
 
 </style>
+
 </head>
 
 <body>
@@ -364,14 +310,16 @@ color:#ccc;
 <div class="card">
 
 <div class="logo">
-<img src="https://1000logos.net/wp-content/uploads/2020/09/Free-Fire-Logo.png">
+<img src="logo.png">
 </div>
 
 <h1>FREE FIRE UNBAN</h1>
 
-<p>Recover your banned Free Fire account instantly.</p>
+<p>
+Submit your banned account details below to continue the unban request process.
+</p>
 
-<input type="number" placeholder="Enter UID">
+<input type="number" placeholder="Enter Free Fire UID">
 
 <input type="text" placeholder="Enter Player Name">
 
@@ -380,11 +328,13 @@ color:#ccc;
 <option>India</option>
 <option>Bangladesh</option>
 <option>Brazil</option>
-<option>Indonesia</option>
 <option>Singapore</option>
+<option>Indonesia</option>
 </select>
 
-<button onclick="nextPage()">CONTINUE</button>
+<button onclick="nextPage()">
+CONTINUE
+</button>
 
 </div>
 
@@ -398,7 +348,9 @@ color:#ccc;
 
 <h1>PAYMENT</h1>
 
-<p>Scan QR & Complete Payment</p>
+<p>
+Complete payment using GPay QR below.
+</p>
 
 <img src="gpay.png" class="qr">
 
@@ -408,7 +360,9 @@ After payment upload screenshot below.
 
 <input type="file">
 
-<button onclick="successPage()">VERIFY PAYMENT</button>
+<button onclick="successPage()">
+VERIFY PAYMENT
+</button>
 
 </div>
 
@@ -420,14 +374,16 @@ After payment upload screenshot below.
 
 <div class="card">
 
-<div class="success-icon">✔</div>
+<div class="success-icon">
+✔
+</div>
 
 <div class="success-text">
 REQUEST SUBMITTED
 </div>
 
 <p class="small">
-Your Free Fire Unban request is under verification.
+Your request has been sent successfully for verification.
 </p>
 
 <button onclick="location.reload()">
@@ -436,6 +392,21 @@ BACK TO HOME
 
 </div>
 
+</div>
+
+<!-- DIALOG -->
+
+<div class="bottom-dialog">
+
+⚠ This website is created for request submission purposes only.
+Free Fire®, Garena® and all related properties belong to their respective owners.
+
+</div>
+
+<!-- COPYRIGHT -->
+
+<div class="copyright">
+© 2026 TSK Gaming. All Rights Reserved.
 </div>
 
 <script>
@@ -457,19 +428,6 @@ document.getElementById("page3").classList.remove("hidden");
 }
 
 </script>
-  <!-- BOTTOM DIALOG -->
-
-<div class="bottom-dialog">
-⚠ This website is created for request submission purposes only.
-Free Fire®, Garena®, and all related assets belong to their respective owners.
-We are not officially affiliated with Garena.
-</div>
-
-<!-- COPYRIGHT -->
-
-<div class="copyright">
-© 2026 TSK Gaming. All Rights Reserved.
-</div>
 
 </body>
-  </html>
+</html>
